@@ -1,0 +1,60 @@
+### Get all departments
+GET http://localhost:8080/api/departments
+
+### Create a new department
+PUT http://localhost:8080/api/departments
+Content-Type: application/json
+
+{
+  "name": "IT 3",
+  "building": "B"
+}
+
+### Get a department
+GET http://localhost:8080/api/departments/48d8f121-89a1-4ae4-a5ff-12d477afd6d5
+
+### Get a not existing department
+GET http://localhost:8080/api/departments/6c71b19d-fcb9-474e-aff8-3fb73bdc9d6a
+
+### Update a department
+PATCH http://localhost:8080/api/departments/48d8f121-89a1-4ae4-a5ff-12d477afd6d5
+Content-Type: application/json
+
+{
+  "building": "E"
+}
+
+### Delete a department
+DELETE http://localhost:8080/api/departments/48d8f121-89a1-4ae4-a5ff-12d477afd6d5
+
+### Get all employees of a department
+GET http://localhost:8080/api/departments/48d8f121-89a1-4ae4-a5ff-12d477afd6d5/employees
+
+### Create a new employee in a department
+POST http://localhost:8080/api/departments/48d8f121-89a1-4ae4-a5ff-12d477afd6d5/employees
+Content-Type: application/json
+
+{
+  "name": "Superman",
+  "salary": 29
+}
+
+### Get all employees
+GET http://localhost:8080/api/employees
+
+### Get an employee
+GET http://localhost:8080/api/employees/68706b9b-42fe-4b0b-bb04-517aeda1f79d
+
+### Get a not existing employee
+GET http://localhost:8080/api/employees/12307a8e-e946-4b0c-9b51-c6e330151fa9
+
+### Update an employee
+PATCH http://localhost:8080/api/employees/68706b9b-42fe-4b0b-bb04-517aeda1f79d
+Content-Type: application/json
+
+{
+  "salary": 70
+}
+
+### Delete an employee
+DELETE http://localhost:8080/api/employees/68706b9b-42fe-4b0b-bb04-517aeda1f79d

@@ -1,0 +1,31 @@
+### Get all employees of a department
+GET http://localhost:8082/api/departments/51d8758b-36da-46e0-baa0-52226d1cf236/employees
+
+### Create a new employee in a department
+POST http://localhost:8082/api/departments/51d8758b-36da-46e0-baa0-52226d1cf236/employees
+Content-Type: application/json
+
+{
+  "name": "Batman",
+  "salary": 20
+}
+
+### Get all employees
+GET http://localhost:8082/api/employees
+
+### Get an employee
+GET http://localhost:8082/api/employees/68706b9b-42fe-4b0b-bb04-517aeda1f79d
+
+### Get a not existing employee
+GET http://localhost:8082/api/employees/12307a8e-e946-4b0c-9b51-c6e330151fa9
+
+### Update an employee
+PATCH http://localhost:8082/api/employees/68706b9b-42fe-4b0b-bb04-517aeda1f79d
+Content-Type: application/json
+
+{
+  "salary": 10
+}
+
+### Delete an employee
+DELETE http://localhost:8082/api/employees/68706b9b-42fe-4b0b-bb04-517aeda1f79d

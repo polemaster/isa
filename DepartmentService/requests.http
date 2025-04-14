@@ -1,0 +1,28 @@
+### Get all departments
+GET http://localhost:8081/api/departments
+
+### Create a new department
+POST http://localhost:8081/api/departments
+Content-Type: application/json
+
+{
+  "name": "IT 3",
+  "building": "B"
+}
+
+### Get a department
+GET http://localhost:8081/api/departments/51d8758b-36da-46e0-baa0-52226d1cf236
+
+### Get a not existing department
+GET http://localhost:8081/api/departments/6c71b19d-fcb9-474e-aff8-3fb73bdc9d6a
+
+### Update a department
+PATCH http://localhost:8081/api/departments/51d8758b-36da-46e0-baa0-52226d1cf236
+Content-Type: application/json
+
+{
+  "building": "E"
+}
+
+### Delete a department
+DELETE http://localhost:8081/api/departments/51d8758b-36da-46e0-baa0-52226d1cf236
